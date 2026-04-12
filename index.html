@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>たつみのホームページ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>たつみのホームページ</h1>
+    </header>
+
+    <div class="view-window">
+        <div class="slider" id="slider">
+
+            <section class="page">
+                <div class="half yellow-bg">
+                    <div class="content">
+                        <img src="etsumi.JPG" alt="プロフィール画像" class="profile-image">
+                        <h2>こんにちは！</h2>
+                        <p>たつみのホームページにようこそ！</p>
+                        <p>右の矢印のボタンを押してね！</p>
+                    </div>
+                </div>
+                <div class="half blue-bg">
+                    <div class="content">
+                        <h2>Profile</h2>
+                        <p>今年度（2026年度）から柏原研究室に所属しています！</p>
+                        <p>修士1年の<ruby>関根<rt>せきね</rt></ruby><ruby>龍充<rt>たつみ</rt></ruby>です！</p>
+                        <p>前までは小山高専に7年間在籍していました。念願の大学（院）生活！</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page">
+                <div class="half blue-bg">
+                    <div class="content">
+                        <h2>My Favorites</h2>
+                        <p>僕の好きなもの・ことを紹介します！</p>
+                        <div class="hobby-list">
+                            <button class="hobby-btn" data-hobby="music">音楽鑑賞・制作</button>
+                            <button class="hobby-btn" data-hobby="travel">旅行 & サウナ</button>
+                            <button class="hobby-btn" data-hobby="youtube">東海オンエアとしゅうゲームズ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="half yellow-bg">
+                    <div class="content" id="hobby-details">
+                        <h3>好きなものを選んでね</h3>
+                        <p>左のボタンを押すと詳細が出るよ！</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page">
+                <div class="half yellow-bg">
+                    <div class="content">
+                        <h2>Promotion</h2>
+                        <p>SNSやブログもみてね！（超不定期更新）</p>
+                        <div class="promo-links">
+                            <a href="https://www.youtube.com/@tam_t3" target="_blank" rel="noopener noreferrer"
+                                class="promo-btn youtube">
+                                <i class="fa-brands fa-youtube"></i> YouTube
+                            </a>
+
+                            <a href="https://note.com/int_main_tam" target="_blank" rel="noopener noreferrer"
+                                class="promo-btn blog">
+                                <i class="fa-solid fa-pen-nib"></i> note
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="half blue-bg">
+                    <div class="content">
+                        <h2>Access</h2>
+                        <p>柏原研究室はこの辺り！</p>
+                        <p>電気通信大学西3号館の3階です！</p>
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d329.9069614092601!2d139.54027033168424!3d35.65714338179236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f011ab2ade29%3A0xdf78b2a20023ed93!2z44CSMTgyLTAwMzMg5p2x5Lqs6YO96Kq_5biD5biC5a-M5aOr6KaL55S677yS5LiB55uuIOilvzPlj7fppKg!5e0!3m2!1sja!2sjp!4v1775890672468!5m2!1sja!2sjp"
+                                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <button id="prevBtn" class="arrow-btn left-arrow">❮</button>
+        <button id="nextBtn" class="arrow-btn right-arrow">❯</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
