@@ -54,7 +54,7 @@ const hobbyData = {
   youtube: {
     title: "東海オンエアとしゅうゲームズ",
     desc: "僕の好きなYouTuberです！<br>東海オンエアはこの前イベント行きました！<br>しゅうゲームズは僕の生きがいです。",
-    img: "tokai.jpg"
+    img: "tokai.JPG"
   }
 };
 
