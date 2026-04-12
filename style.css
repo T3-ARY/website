@@ -216,6 +216,10 @@ a {
   background-color: #43b908;
 }
 
+.promo-btn.instagram {
+  background-color: #e107b6;
+}
+
 .promo-btn i {
   margin-right: 8px;
   font-size: 1.2em;
