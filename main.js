@@ -1,45 +1,59 @@
 const slider = document.getElementById('slider');
 const nextBtn = document.getElementById('nextBtn');
 const prevBtn = document.getElementById('prevBtn');
-
+ 
 let currentIndex = 0;
 const totalPages = 3;
-
+ 
+function isMobile() {
+  return window.innerWidth <= 768;
+}
+ 
+function applyLayout() {
+  if (isMobile()) {
+    slider.style.transform = '';
+  }
+}
+ 
+applyLayout();
+window.addEventListener('resize', applyLayout);
 updateButtons();
-
+ 
 nextBtn.addEventListener('click', () => {
+  if (isMobile()) return;
   if (currentIndex < totalPages - 1) {
     currentIndex++;
     slider.style.transform = `translateX(-${currentIndex * 100}vw)`;
     updateButtons();
   }
 });
-
+ 
 prevBtn.addEventListener('click', () => {
+  if (isMobile()) return;
   if (currentIndex > 0) {
     currentIndex--;
     slider.style.transform = `translateX(-${currentIndex * 100}vw)`;
     updateButtons();
   }
 });
-
+ 
 function updateButtons() {
   if (currentIndex === 0) {
     prevBtn.style.display = 'none';
   } else {
     prevBtn.style.display = 'flex';
   }
-
+ 
   if (currentIndex === totalPages - 1) {
     nextBtn.style.display = 'none';
   } else {
     nextBtn.style.display = 'flex';
   }
 }
-
+ 
 const hobbyBtns = document.querySelectorAll('.hobby-btn');
 const hobbyDetails = document.getElementById('hobby-details');
-
+ 
 const hobbyData = {
   music: {
     title: "音楽鑑賞・制作",
@@ -57,14 +71,14 @@ const hobbyData = {
     img: "tokai.JPG"
   }
 };
-
+ 
 hobbyBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     const hobbyKey = btn.getAttribute('data-hobby');
     const data = hobbyData[hobbyKey];
-
+ 
     hobbyDetails.classList.add('fade-out');
-
+ 
     setTimeout(() => {
       hobbyDetails.innerHTML = `
         <h3>${data.title}</h3>
