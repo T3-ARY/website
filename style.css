@@ -1,3 +1,231 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "DotGothic16", sans-serif;
+  font-size: 24px;
+  overflow: hidden;
+}
+
+button,
+a {
+  font-family: inherit;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.view-window {
+  margin-top: 54px;
+  height: calc(100vh - 54px);
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  width: 300vw;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.page {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.half {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.yellow-bg {
+  background-color: #ffeb3b;
+  color: #333;
+}
+
+.blue-bg {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.profile-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 5px solid #fff;
+}
+
+.content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: #333;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 0;
+  font-size: 28px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  transition: background-color 0.2s;
+}
+
+.arrow-btn:hover {
+  background-color: #666;
+}
+
+.right-arrow {
+  right: 30px;
+  animation: floatRight 1.2s ease-in-out infinite;
+}
+
+.left-arrow {
+  left: 30px;
+  animation: floatLeft 1.2s ease-in-out infinite;
+}
+
+@keyframes floatRight {
+
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(0);
+  }
+
+  50% {
+    transform: translateY(-50%) translateX(8px);
+  }
+}
+
+@keyframes floatLeft {
+
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(0);
+  }
+
+  50% {
+    transform: translateY(-50%) translateX(-8px);
+  }
+}
+
+.hobby-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.hobby-btn {
+  padding: 15px 30px;
+  font-size: 24px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 0;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.hobby-btn:hover {
+  background-color: #fff;
+  color: #2196f3;
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+#hobby-details {
+  transition: opacity 0.4s ease-in-out;
+  opacity: 1;
+}
+
+#hobby-details.fade-out {
+  opacity: 0;
+}
+
+.hobby-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.promo-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.promo-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: transform 0.2s, opacity 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.promo-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.promo-btn.youtube {
+  background-color: #ff0000;
+}
+
+.promo-btn.blog {
+  background-color: #43b908;
+}
+
+.promo-btn.instagram {
+  background-color: #e107b6;
+}
+
+.promo-btn i {
+  margin-right: 8px;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
 .map-container {
   margin-top: 20px;
   border-radius: 10px;
