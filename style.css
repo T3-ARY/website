@@ -233,8 +233,6 @@ a {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.mobile-only { display: none; }
-
 @media (max-width: 768px) {
  
   body,
@@ -297,5 +295,22 @@ a {
  
   .map-container {
     max-width: 90%;
+  }
+
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .hobby-btn {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #333;
+    border-color: #333;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  .hobby-btn:hover {
+    background-color: #333;
+    color: #ffeb3b;
   }
 }
