@@ -235,7 +235,49 @@ a {
 
 @media (max-width: 768px) {
 
+  body,
+  html {
+    overflow: auto;
+    font-size: 18px;
+  }
+
+  .view-window {
+    height: auto;
+    overflow: visible;
+  }
+
+  .slider {
+    display: block;
+    width: 100%;
+    transition: none;
+    transform: none !important;
+  }
+
   .page {
+    width: 100%;
+    height: auto;
     flex-direction: column;
+  }
+
+  .half {
+    width: 100%;
+    padding: 40px 0;
+  }
+
+  .profile-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .arrow-btn {
+    display: none !important;
+  }
+
+  .hobby-image {
+    max-width: 90%;
+  }
+
+  .map-container {
+    max-width: 90%;
   }
 }
