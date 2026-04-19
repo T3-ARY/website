@@ -264,12 +264,18 @@ a {
     padding: 40px 0;
   }
  
-  .half:nth-child(odd) {
+  .pc-only { display: none; }
+  .mobile-only { display: block; }
+ 
+  .page:nth-child(1) .half:nth-child(1),
+  .page:nth-child(2) .half:nth-child(1),
+  .page:nth-child(3) .half:nth-child(1) {
     background-color: #ffeb3b !important;
     color: #333 !important;
   }
- 
-  .half:nth-child(even) {
+  .page:nth-child(1) .half:nth-child(2),
+  .page:nth-child(2) .half:nth-child(2),
+  .page:nth-child(3) .half:nth-child(2) {
     background-color: #2196f3 !important;
     color: #fff !important;
   }
